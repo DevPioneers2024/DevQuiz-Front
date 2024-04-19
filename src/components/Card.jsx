@@ -1,13 +1,16 @@
 import React from 'react'
 import Button from '../utils/Button'
+import './Card.css'
 
-const Card = () => {
+const Card = ({titulo, cantidad}) => {
   return (
-    <div>
-        <h1>Nombre Sala: </h1>
-        <p>Nro Jugadores: </p>
-        <Button titulo="Jugar"/>
-    </div>
+    <>
+        <div className="card-container">
+            <h1>Sala: {titulo}</h1>
+            <p>Nro Jugadores: {cantidad}</p>
+            <Button titulo="Jugar"/>
+        </div>
+    </>
   )
 }
 
