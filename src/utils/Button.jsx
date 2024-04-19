@@ -1,9 +1,7 @@
 import React from 'react'
 
-function Button({title}) {
+export const Button = ({titulo}) => {
   return (
-    <button>{title}</button>
+    <button>{titulo}</button>
   )
 }
-
-export default Button
