@@ -1,6 +1,6 @@
 import React from 'react'
 import Button from '../utils/Button'
-import './Card.css'
+import './Card.sass'
 
 const Card = ({titulo, cantidad}) => {
   return (
