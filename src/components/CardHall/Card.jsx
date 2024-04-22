@@ -1,5 +1,4 @@
-import React from 'react'
-import Button from '../utils/Button'
+import Button from '../../utils/Button'
 import './Card.sass'
 
 const Card = ({titulo, cantidad}) => {
