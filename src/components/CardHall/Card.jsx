@@ -1,6 +1,7 @@
 import Button from '../../utils/Button'
 import './Card.sass'
 
+// eslint-disable-next-line react/prop-types
 const Card = ({titulo, cantidad}) => {
   return (
     <>
