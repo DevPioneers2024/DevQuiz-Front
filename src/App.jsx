@@ -1,10 +1,12 @@
-import './App.sass'
+import { Intruction } from './components/instruction/Intruction'
+import SliderUI from './components/Slider/SliderUI'
 
 
 function App() {
   return (
     <>
-      <h1>hello world</h1>
+      <SliderUI />
+      <Intruction />
     </>
   )
 }
