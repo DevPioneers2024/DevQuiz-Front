@@ -1,10 +1,15 @@
 @import "_variables.sass"
 .container
+  width: 100%
+  margin: 10 auto
+  padding: 20px 0
+  max-width: 100%
   display: flex
+  align-items: center
   flex-wrap: wrap
-  width: auto
+  gap: 1.5em
+  justify-content: space-evenly
   background-color: $color-background
-  margin: 18px
 
 .cardContainer
   background-color: #5356ff
@@ -12,8 +17,9 @@
   color: #67C6E3
   width: auto
   height: auto
-  margin: 12px
+  margin: auto 10px
   flex: 1
+  min-width: 250px
   justify-content: space-between
   
 button
