@@ -9,7 +9,7 @@ function Navbar() {
         <img src="./src/assets/image/logo.webp" alt="logo quiz" className="logo"/>
       </div>
       <div className="auth-buttons">
-        <button className="login">Iniciar sesión</button>
+        <button className="login">Iniciar Sesión</button>
         <button className="register">Registrarse</button>
       </div>
     </nav>
