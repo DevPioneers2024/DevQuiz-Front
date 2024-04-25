@@ -3,7 +3,7 @@ import { Intruction } from './components/instruction/Intruction'
 import SliderUI from './components/Slider/SliderUI'
 
 
-function App () {
+function App() {
   return (
     <>
       <Navbar />
