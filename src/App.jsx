@@ -1,17 +1,7 @@
-import Navbar from './components/Navbar/Navbar'
-import { Intruction } from './components/instruction/Intruction'
-import SliderUI from './components/Slider/SliderUI'
-import SeccionPartida from './components/CardHall/SeccionPartida'
+import { Home } from './pages/Home'
 
 function App() {
-  return (
-    <>
-      <Navbar />
-      <SliderUI />
-      <Intruction />
-      <SeccionPartida />
-    </>
-  )
+  return <Home />
 }
 
 export default App

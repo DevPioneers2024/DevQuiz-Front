@@ -1,6 +1,5 @@
 import Button from '../../utils/Button'
 import style from '../../sass/Card.module.sass'
-import './Card.sass'
 
 const Card = ({ titulo, cantidad }) => {
   return (
