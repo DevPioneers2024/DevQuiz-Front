@@ -1,18 +1,7 @@
-import Navbar from "./components/Navbar/Navbar";
-import { Intruction } from './components/instruction/Intruction'
-import SliderUI from './components/Slider/SliderUI'
+import { Home } from './pages/Home'
 
-
-function App () {
-  return (
-    <>
-      <Navbar />
-      <SliderUI />
-      <Intruction />
-    </>
-  )
+function App() {
+  return <Home />
 }
 
 export default App
-
-
