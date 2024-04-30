@@ -7,7 +7,7 @@ const SeccionPartida = () => {
     <>
       <Button titulo='Jugar' />
       <div className={style.container}>
-        <Card titulo='Ganadores' cantidad='3' />
+        <Card titulo='Ganadores' cantidad='1' />
         <Card titulo='Principiantes' cantidad='2' />
         <Card titulo='Los Ultimos' cantidad='4' />
         <Card titulo='Los Malos' cantidad='2' />
