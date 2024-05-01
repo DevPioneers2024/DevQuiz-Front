@@ -4,4 +4,4 @@ const Gameroom = () => {
   )
 }
 
-export default Gameroom
+export { Gameroom }
