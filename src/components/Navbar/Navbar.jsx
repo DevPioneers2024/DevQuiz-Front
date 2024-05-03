@@ -1,13 +1,13 @@
 import { useState } from 'react'
-import Button from '../../utils/Button'
+import style from '../../sass/navbar.module.sass'
+import { Button } from '../../utils/Button'
 import { MaterialSymbolsClose, MaterialSymbolsDehaze } from '../../assets/icons'
 import { Image } from '../../utils/image'
-import style from '../../sass/navbar.module.sass'
 
 function Navbar() {
-  const [menu, setMenu] = useState(false)
-  const ChangeMobile = () => {
-    setMenu(!menu)
+  const [menuOpen, setMenuOpen] = useState(false)
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen)
   }
   return (
     <nav className={style.Navbar}>
@@ -16,8 +16,8 @@ function Navbar() {
         alt='logo quiz'
         className={style.Navbar__Logo}
       />
-      <a onClick={() => ChangeMobile()} className={style.IconMenuMobile}>
-        {menu ? (
+      <a onClick={() => toggleMenu()} className={style.IconMenuMobile}>
+        {menuOpen ? (
           <Image
             src={MaterialSymbolsClose}
             className={style.IconMenuMobile__Icon}
@@ -29,7 +29,9 @@ function Navbar() {
           />
         )}
       </a>
-      <div className={menu ? style.Navbar__Items__Open : style.Navbar__Items}>
+      <div
+        className={menuOpen ? style.Navbar__Items__Open : style.Navbar__Items}
+      >
         <Button
           titulo='Iniciar Sesión'
           className={style.Navbar__Items__Open__Click}

@@ -1,3 +1,3 @@
-export const Image = ({ src, alt, className }) => {
-  return <img src={src} alt={alt} className={className} />
-}
+export const Image = ({ src, alt, className }) => (
+  <img src={src} alt={alt} className={className} />
+)

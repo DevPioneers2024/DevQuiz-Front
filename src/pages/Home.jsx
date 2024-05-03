@@ -1,7 +1,7 @@
 import Navbar from '../components/Navbar/Navbar'
 import { Intruction } from '../components/instruction/Intruction'
 import SliderUI from '../components/Slider/SliderUI'
-import SeccionPartida from '../components/CardHall/SeccionPartida'
+import RoomSection from '../components/CreateRoom/RoomSection'
 
 const Home = () => {
   return (
@@ -9,7 +9,7 @@ const Home = () => {
       <Navbar />
       <SliderUI />
       <Intruction />
-      <SeccionPartida />
+      <RoomSection />
     </>
   )
 }
