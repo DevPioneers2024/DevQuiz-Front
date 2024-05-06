@@ -1,6 +1,10 @@
+import Preguntas from '../components/answer/Preguntas'
 const Gameroom = () => {
   return (
-    <div>Gameroom</div>
+    <>
+      <Preguntas />
+      <div>Gameroom</div>
+    </>
   )
 }
 
