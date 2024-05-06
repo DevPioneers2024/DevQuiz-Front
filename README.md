@@ -12,9 +12,9 @@ To run this project, make sure you have the following installed:
 ## Installation
 
 1. Clone the repository: `https://github.com/DevPioneers2024/DevQuiz-Front.git`
-2. Navigate to the project directory: `cd `
+2. Navigate to the project directory: `cd`
 3. Install the dependencies: `npm install`
-  
+
 ## Running the Application
 
 To run the application in development mode, use the following command:
