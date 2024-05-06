@@ -1,15 +1,9 @@
-import { Button } from '../../utils/Button'
-import style from '../../sass/Card.module.sass'
-
-const Card = ({ titulo, cantidad, usuario }) => {
+export const Card = ({ titulo, cantidad, usuario, style }) => {
   return (
-    <div className={style.cardContainer}>
+    <div className={style}>
       <h1>Sala: {titulo}</h1>
       <p>Nro Jugadores: {cantidad}</p>
       <p>Usuario: {usuario}</p>
-      <Button titulo='Unirse' />
     </div>
   )
 }
-
-export default Card
