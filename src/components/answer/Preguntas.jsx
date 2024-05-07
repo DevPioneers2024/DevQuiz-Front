@@ -1,15 +1,12 @@
 import '../../sass/preguntas.sass'
+import style from '../../sass/Gameroom.module.sass'
 
 import 'react';
 
 function Preguntas() {
     return (
-        <section className="Preguntas">
-           { /*<header className="Preguntas-title">
-                <h1>Answer Race 2024</h1>
-              </header>
-            */}
-            <main className="Preguntas-main">
+        <section className={style.useranswer}>
+            <main>
                 <article className="Preguntas-question">
                     <h2 className="Preguntas-questionText">¿Esta sera donde entre la pregunta...?</h2>
                     <form className="Preguntas-answers">
