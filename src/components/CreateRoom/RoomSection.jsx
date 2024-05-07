@@ -1,30 +1,30 @@
 import { useState } from 'react'
-import CreateRoomForm from './CreateRoomForm'
+import { CreateRoomForm } from './CreateRoomForm'
+import { useCreateApiHook } from '../../api/hooks/useCreateApiHook'
 import { Button } from '../../utils/Button'
+import { fetchDataAndNavigate, UrlCreate } from '../../api/utils'
 import { useNavigate } from 'react-router-dom'
-import { useRoomService } from '../../hooks/useRoomServices'
 
-const RoomSection = () => {
-  const roomService = useRoomService()
+export const RoomSection = () => {
+  const { fetchData } = useCreateApiHook()
   const navigate = useNavigate()
-  const [seeForm, setSeeForm] = useState(false)
-
+  const [showCreateRoom, setShowCreateRoom] = useState(false)
   const HandleCreateRoom = async (roomNameValue, userNameValue) => {
-    const roomData = await roomService.createRoom(roomNameValue, userNameValue)
-    if (roomData) {
-      console.log('Sala Creada', roomData)
-      const roomId = roomData._id
-      navigate(`/room/${roomId}`)
-    } else {
-      console.error('Error al crear la sala')
-    }
+    fetchDataAndNavigate(
+      fetchData,
+      UrlCreate,
+      'POST',
+      {
+        roomName: roomNameValue,
+        userName: userNameValue
+      },
+      navigate
+    )
   }
   return (
     <>
-      <Button titulo='crear sala' onClick={() => setSeeForm(true)} />
-      {seeForm && <CreateRoomForm HandleCreateRoom={HandleCreateRoom} />}
+      <Button titulo='crear sala' onClick={() => setShowCreateRoom(true)} />
+      {showCreateRoom && <CreateRoomForm HandleCreateRoom={HandleCreateRoom} />}
     </>
   )
 }
-
-export default RoomSection

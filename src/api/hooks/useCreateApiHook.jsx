@@ -13,7 +13,6 @@ export const useCreateApiHook = () => {
       const data = await response.json()
       setResponseData(data)
       setLoading(false)
-      console.log(data, 'fetchdata')
       return data
     } catch (error) {
       console.error(error)

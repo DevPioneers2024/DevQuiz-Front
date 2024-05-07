@@ -1,6 +1,7 @@
 import { Button } from '../../utils/Button'
+import { Input } from '../../utils/Input'
 
-const CreateRoomForm = ({ HandleCreateRoom }) => {
+export const CreateRoomForm = ({ HandleCreateRoom }) => {
   const handleSubmit = e => {
     e.preventDefault()
     const roomNameValue = e.target.roomNameInput.value
@@ -9,11 +10,9 @@ const CreateRoomForm = ({ HandleCreateRoom }) => {
   }
   return (
     <form onSubmit={handleSubmit}>
-      <input type='text' name='roomNameInput' placeholder='Nombre de la sala' />
-      <input type='text' name='userNameInput' placeholder='Nombre de usuario' />
+      <Input type='text' name='roomNameInput' placeholder='Nombre de la sala' />
+      <Input type='text' name='userNameInput' placeholder='Nombre de usuario' />
       <Button titulo='Crear' type='submit' />
     </form>
   )
 }
-
-export default CreateRoomForm
