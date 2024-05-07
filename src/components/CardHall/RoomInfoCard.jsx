@@ -1,5 +1,14 @@
 import { Button } from '../../utils/Button'
+import { useCreateApiHook } from '../../api/hooks/useCreateApiHook'
+import { UrlDelete } from '../../api/utils'
+import { useNavigate } from 'react-router-dom'
 export const RoomInfoCard = ({ roomName, _id, users }) => {
+  const navigate = useNavigate()
+  const { fetchData } = useCreateApiHook()
+  const HandleDeleteRoom = async () => {
+    await fetchData(`${UrlDelete}/${_id}`, 'DELETE')
+    navigate('/')
+  }
   return (
     <div>
       <h2>Nombre de la Sala:{roomName}</h2>
@@ -14,7 +23,7 @@ export const RoomInfoCard = ({ roomName, _id, users }) => {
         titulo='Iniciar Juego'
         onClick={() => console.log('Start Game')}
       />
-      <Button titulo='Cerrar Sala' onClick={() => console.log('Close Room')} />
+      <Button titulo='Cerrar Sala' onClick={HandleDeleteRoom} />
     </div>
   )
 }
