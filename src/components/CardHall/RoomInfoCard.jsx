@@ -1,12 +1,18 @@
 import { Button } from '../../utils/Button'
-import { useCreateApiHook } from '../../api/hooks/useCreateApiHook'
-import { UrlDelete } from '../../api/utils'
 import { useNavigate } from 'react-router-dom'
-export const RoomInfoCard = ({ roomName, _id, users }) => {
+import { UserList } from '../../utils/UserList'
+export const RoomInfoCard = ({
+  roomName,
+  _id,
+  users,
+  url,
+  method,
+  useApiHook
+}) => {
   const navigate = useNavigate()
-  const { fetchData } = useCreateApiHook()
+  const { fetchData } = useApiHook()
   const HandleDeleteRoom = async () => {
-    await fetchData(`${UrlDelete}/${_id}`, 'DELETE')
+    await fetchData(`${url}/${_id}`, method)
     navigate('/')
   }
   return (
@@ -14,11 +20,7 @@ export const RoomInfoCard = ({ roomName, _id, users }) => {
       <h2>Nombre de la Sala:{roomName}</h2>
       <p>Id: {_id}</p>
       <p>Usuarios de la Sala:</p>
-      <ul>
-        {users.map(user => (
-          <li key={user}>{user}</li>
-        ))}
-      </ul>
+      <UserList users={users} />
       <Button
         titulo='Iniciar Juego'
         onClick={() => console.log('Start Game')}

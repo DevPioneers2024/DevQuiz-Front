@@ -1,24 +1,28 @@
-import { useEffect } from 'react'
-import { useCreateApiHook } from '../../api/hooks/useCreateApiHook'
-import { UrlList } from '../../api/utils'
-import { RoomCard } from '../CardHall/RoomCard'
-export const ListRoom = () => {
-  const { responseData, fetchData } = useCreateApiHook()
+import { useEffect, useState } from 'react'
+import { RoomList } from './RoomList'
+import { Error } from '../../utils/Error'
+
+export const ListRoom = ({ useApiHook, url, method }) => {
+  const { responseData, fetchData } = useApiHook()
   const { error, response } = responseData
+  const [latestRooms, setLatestRooms] = useState([])
+
   useEffect(() => {
     const interval = setInterval(() => {
-      fetchData(UrlList, 'GET')
+      fetchData(url, method)
     }, 3000)
     return () => clearInterval(interval)
-  }, [fetchData])
+  }, [fetchData, url, method])
+  useEffect(() => {
+    if (response) {
+      setLatestRooms(response.slice(-5).reverse())
+    }
+  }, [response])
+
   return (
     <div>
-      {error && <div>error...</div>}
-      {response &&
-        response
-          .slice()
-          .reverse()
-          .map(item => <RoomCard key={item.id} item={item} />)}
+      {error && <Error message='Error al cargar la lista de salas' />}
+      {<RoomList rooms={latestRooms} />}
     </div>
   )
 }

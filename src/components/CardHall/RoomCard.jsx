@@ -4,18 +4,22 @@ import style from '../../sass/Card.module.sass'
 import { Button } from '../../utils/Button'
 import { JoinRoom } from '../JoinRoom/JoinRoom'
 import { useNavigate } from 'react-router-dom'
-import { useCreateApiHook } from '../../api/hooks/useCreateApiHook'
-import { fetchDataAndNavigate, UrlJoin } from '../../api/utils'
 
-export const RoomCard = ({ item }) => {
-  const { fetchData } = useCreateApiHook()
+export const RoomCard = ({
+  item,
+  fetchDataAndNavigate,
+  url,
+  method,
+  useApiHooks
+}) => {
+  const { fetchData } = useApiHooks()
   const navigate = useNavigate()
   const [showJoinRoom, setShowJoinRoom] = useState(false)
   const HandleJoinRoom = async (userNameValue, roomIdValue) => {
     fetchDataAndNavigate(
       fetchData,
-      UrlJoin,
-      'POST',
+      url,
+      method,
       {
         roomId: roomIdValue,
         userName: userNameValue
