@@ -1,6 +1,6 @@
 import { Home } from './pages/Home'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import WaitRooms from './pages/WaitRooms'
+import { WaitRooms } from './pages/WaitRooms'
 
 function App() {
   return (

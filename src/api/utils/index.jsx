@@ -13,11 +13,14 @@ export const fetchDataAndNavigate = async (
     const joinData = await fetchData(url, method, requestData)
     if (joinData) {
       const roomId = joinData.response._id
-      navigate(`/room/${roomId}`)
+      navigate(`/room/${roomId}`, { state: { joinData } })
+      return joinData
     } else {
       console.error('Error al unirse a la sala')
+      return null
     }
   } catch {
     console.error('Error al unirse a la sala')
+    return null
   }
 }

@@ -1,1 +1,0 @@
-const uri = `mongodb+srv://csoperativo:497256asD.@cluster0.up0hzvx.mongodb.net/`;
