@@ -1,16 +1,15 @@
 import style from '../../sass/intruction.module.sass'
+
 export const Intruction = () => {
   return (
-    <article className={style.text}>
+    <section className={style.text}>
       <h2>
         Instrucciones para el Juego de Trivia con 2 ó un máximo de 4 Jugadores
       </h2>
-
       <h3>Dinámica del Juego:</h3>
-
       <ul>
         <li>
-          <p className=''>
+          <p>
             Cada jugador tendrá la oportunidad de responder a una pregunta en un
             tiempo determinado, por ejemplo, 20 segundos.
           </p>
@@ -33,7 +32,6 @@ export const Intruction = () => {
         </li>
       </ul>
       <h3>Determinación del Ganador:</h3>
-
       <ul>
         <li>
           <p>
@@ -48,6 +46,6 @@ export const Intruction = () => {
           </p>
         </li>
       </ul>
-    </article>
+    </section>
   )
 }
