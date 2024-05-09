@@ -9,7 +9,8 @@ function App() {
       <Routes>
         <Route exact path='/' element={<Home />} />
         <Route path='/room/:id' element={<WaitRooms />} />
-        <Route path='/Gameroon' element={<Gameroom />} />
+        <Route path='/Gameroom' element={<Gameroom />} />
+        {/*<Route path='/Gameroon' element={<Gameroom />} />*/}
       </Routes>
     </Router>
   )
