@@ -1,8 +1,8 @@
-import Preguntas from '../components/answer/Preguntas'
+import Preguntas from "../components/answer/Preguntas"
 import Navtitle from '../components/Navtitle/Navtitle'
 import Players from '../components/Players/Players'
 import style from '../sass/Gameroom.module.sass'
-import Button from "../utils/Button"
+import {Button} from "../utils/Button"
 
 const Gameroom = () => {
   return (

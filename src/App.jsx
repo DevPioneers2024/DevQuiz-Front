@@ -1,6 +1,6 @@
 import { Home } from './pages/Home'
-import { Gameroom } from './pages/Gameroom';
-import { WaitRooms } from './pages/WaitRooms';
+import { Gameroom } from '../src/pages/Gameroom';
+import { WaitRooms } from '../src/pages/WaitRooms';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 function App() {

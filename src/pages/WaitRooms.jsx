@@ -12,4 +12,4 @@ const WaitRooms = () => {
   return <div>{joinData && <RoomInfoCard {...joinData.response} />}</div>
 }
 
-export default WaitRooms
+export { WaitRooms } 
