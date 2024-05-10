@@ -34,10 +34,15 @@
   width: 80%
   height: 50%
   //padding: 10px 20px
-  display: flex
+  display: grid
+  grid-template-columns: repeat(2, 1fr)
   gap: 1em
-  justify-content: space-evenly 
-  overflow: hidden
+  //justify-content: space-evenly 
+  //overflow: hidden
+
+@media (width >= 320px) and (width <= 768px)
+  .cont_preguntas
+    background-color: yellow
 
 .sidebar
   flex: 1
