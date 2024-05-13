@@ -8,6 +8,7 @@ const Gameroom = () => {
   return (
     <div className={style.container}>
       <h1>Answer Race 2024</h1>
+
       <section className={style.cont_preguntas}>
         <div className={style.questions}>
           < Preguntas />
@@ -18,15 +19,15 @@ const Gameroom = () => {
         </div>
       </section>
 
-      <div className="cont_tiempoPregunta">
+      <aside>
         <p>Tiempo restante: 00:00</p>
         <p>Pregunta: 1/5</p>
-      </div>
+      </aside>
 
-      <div className="cont_botones">
+      <footer>
         <Button titulo='Jugar De Nuevo' />
         <Button titulo='Abandonar' />
-      </div>
+      </footer>
     </div>
   )
 }

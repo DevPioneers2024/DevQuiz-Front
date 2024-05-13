@@ -2,7 +2,7 @@ import style from '../../sass/Gameroom.module.sass'
 
 const Players = () => {
   return (
-    <div className="players">
+    <>
       <div className={style.userplayer}>
         <img src="https://images.pexels.com/photos/2253275/pexels-photo-2253275.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" />
         <div className={style.userplayer__info}>
@@ -21,7 +21,7 @@ const Players = () => {
           <span>Jugador 4</span>
         </div>
       </div>
-    </div>
+    </>
   )
 }
 

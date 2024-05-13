@@ -1,51 +1,26 @@
 @import "_variables.sass"
 @import "global.sass"
 
-@mixin mobile
-  @media screen and (max-width: 480px)
-    @content
-
-@mixin tablet
-  @media screen and (max-width: 768px)
-    @content
-
-@mixin laptop
-  @media screen and (max-width: 1200px)
-    @content  
-
 .container
   width: 100%
-  margin: 10 auto
-  padding: 20px 0
-  max-width: 100%
-  height: 100vh
-  display: flex
-  flex-direction: column
-  align-items: center
-  flex-wrap: wrap
-  gap: 1.5em
-  justify-content: space-evenly
+  height: 95vh
+  min-height: 95vh
+  display: grid
+  grid-template-columns: 1fr
+  justify-items: center
+  gap: 16px
   background-color: $color-primary
 
 .cont_preguntas
   background-color: $color-secondary
-  border: 2px solid 
-  border-radius: 10px
-  width: 80%
-  height: 50%
-  //padding: 10px 20px
+  border-radius: 15px
+  width: 90%
   display: grid
-  grid-template-columns: repeat(2, 1fr)
+  grid-template-columns: repeat(auto-fit,minmax(250px, 1fr))
   gap: 1em
-  //justify-content: space-evenly 
-  //overflow: hidden
-
-@media (width >= 320px) and (width <= 768px)
-  .cont_preguntas
-    background-color: yellow
 
 .sidebar
-  flex: 1
+  width: 60%
   background-color: $color-tertiary
 
 .navtitle
@@ -54,7 +29,13 @@
   background-color: $color-quaternary
   height: 30px
   padding: 10px
-  justify-content: space-between
+  justify-content: start
+  img
+    width: 40px
+    height: 40px
+    padding: 10px
+    border-radius: 50%
+    object-fit: cover
   &__logo
     font-weight: bold
 
@@ -78,7 +59,8 @@
 
 
 .questions
-  flex: 2
+  //flex: 2
+  width: auto
   background-color: $color-quaternary
 
 .useranswer

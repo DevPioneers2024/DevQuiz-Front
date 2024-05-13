@@ -1,13 +1,10 @@
 import style from '../../sass/Gameroom.module.sass'
-
+import Imagen from '../../../../../capturas/Rocky.png'
 const Navtitle = () => {
   return (
     <div className={style.navtitle}>
-        <span className={style.navtitle__logo}>Answer Race</span>
-        <div>
-            <img src="" alt="" />
-            <span>Jhon</span>
-        </div>
+        <img src={Imagen} alt="" />
+        <span className={style.navtitle__logo}>Rocky</span>
     </div>
   )
 }
