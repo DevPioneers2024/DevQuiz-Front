@@ -3,7 +3,9 @@ import style from '../../sass/Gameroom.module.sass'
 
 import 'react';
 
+
 function Preguntas() {
+
     return (
         <section className={style.useranswer}>
             <main className={style.useranswer__main}>
