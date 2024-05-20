@@ -9,6 +9,6 @@ export function useFetch(url) {
       .then((data) => setData(data));
   },[]);
   
-  return [data]
+  return {data};
 }
 //como consumir aps en  react como un profesional - Carlso Azaistre

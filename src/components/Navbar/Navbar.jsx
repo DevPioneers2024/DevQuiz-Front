@@ -3,6 +3,7 @@ import style from '../../sass/navbar.module.sass'
 import { Button } from '../../utils/Button'
 import { MaterialSymbolsClose, MaterialSymbolsDehaze } from '../../assets/icons'
 import { Image } from '../../utils/image'
+import { Link } from 'react-router-dom'
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -32,6 +33,13 @@ function Navbar() {
       <div
         className={menuOpen ? style.Navbar__Items__Open : style.Navbar__Items}
       >
+      <Link to={"/Gameroom"}>
+        <Button
+            titulo='Jugar'
+            className={style.Navbar__Items__Open__Click}
+        />
+      </Link>
+        
         <Button
           titulo='Iniciar Sesión'
           className={style.Navbar__Items__Open__Click}
