@@ -1,6 +1,9 @@
 import style from '../../sass/intruction.module.sass'
+import { useCollapse } from 'react-collapsed'
 
 export const Intruction = () => {
+  const { getCollapseProps, getToggleProps, isExpanded } = useCollapse()
+  
   return (
     <section className={style.text}>
       <h2>
@@ -31,21 +34,29 @@ export const Intruction = () => {
           </p>
         </li>
       </ul>
-      <h3>Determinación del Ganador:</h3>
-      <ul>
-        <li>
-          <p>
-            Al final de las 5 preguntas, se suman los puntos obtenidos por cada
-            jugador.
-          </p>
-        </li>
-        <li>
-          <p>
-            El jugador con la mayor cantidad de puntos al final de las 5
-            preguntas es el ganador del juego.
-          </p>
-        </li>
-      </ul>
+      {isExpanded ? '' : (
+        <button {...getToggleProps()}>Leer Mas</button>
+      )}
+      <section {...getCollapseProps()}>
+          <h3>Determinación del Ganador:</h3>
+        <ul>
+          <li>
+            <p>
+              Al final de las 5 preguntas, se suman los puntos obtenidos por cada
+              jugador.
+            </p>
+          </li>
+          <li>
+            <p>
+              El jugador con la mayor cantidad de puntos al final de las 5
+              preguntas es el ganador del juego.
+            </p>
+          </li>
+        </ul>
+      </section>
+      {!isExpanded ? '' : (
+        <button {...getToggleProps()}>Leer Menos</button>
+      )}
     </section>
   )
 }
