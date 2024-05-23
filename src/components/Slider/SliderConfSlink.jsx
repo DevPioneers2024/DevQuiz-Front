@@ -7,4 +7,5 @@ export const SliderConfSlink = {
   speed: 4000,
   autoplaySpeed: 500,
   cssEase: 'linear',
+  pauseOnHover: true
 }
