@@ -1,5 +1,5 @@
 import { CreateRoomForm } from "../components/CreateRoom/CreateRoomForm"
-import style from '../sass/Gameroom.module.sass'
+import style from '../sass/CreateHall.module.sass'
 
 const CreateHall = () => {
   return (
