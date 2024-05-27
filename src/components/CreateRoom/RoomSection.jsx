@@ -4,6 +4,7 @@ import { useCreateApiHook } from '../../api/hooks/useCreateApiHook'
 import { Button } from '../../utils/Button'
 import { fetchDataAndNavigate, UrlCreate } from '../../api/utils'
 import { useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import style from '../../sass/Card.module.sass'
 
 export const RoomSection = () => {
@@ -24,8 +25,10 @@ export const RoomSection = () => {
   }
   return (
     <section className={style.container}>
+      <Link to={"/CreateHall"}>
       <Button titulo='crear sala' onClick={() => setShowCreateRoom(true)} />
       {showCreateRoom && <CreateRoomForm HandleCreateRoom={HandleCreateRoom} />}
+      </Link>
     </section>
   )
 }
